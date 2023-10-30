@@ -69,3 +69,37 @@ int main ()
     obj.area_of_rect();
   return 0;
 }
+
+
+
+
+
+3.MULTI-LEVEL-process of creating or derving a new class from already derived class.
+
+#include<iostream>
+using namespace std;
+class Length
+{
+    public:
+     int l;
+};
+class Breadth:public Length
+{
+ public:
+    int b;
+};
+class Rectangle:public Breadth
+{
+    public:
+    void display(){
+    cout<<"Area of Rectangle is:"<<(l*b)<<endl;
+    }
+};
+int main ()
+{
+    Rectangle obj;
+    obj.l=3;
+    obj.b=4;
+    obj.display();
+  return 0;
+}
