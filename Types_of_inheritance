@@ -1,0 +1,41 @@
+INHERITANCE:
+  .It is the process of deriving or creating a new class from already existing class.
+  .By default visibility mode is private.
+  .visibility mode specifies whether the features of base class inheriting publicly or privately.
+
+
+
+1.Single Inheritance- process of deriving only one derived class from only one  base class.
+
+
+#include<iostream>
+using namespace std;
+class Rec
+{
+    public:
+    int l,b;
+};
+class Area:public Rec
+{
+    public:
+    Area(int l,int b)
+    {
+        this->l=l;
+        this->b=b;
+    }
+    void area()
+    {
+        cout<<"Area is :"<<(l*b)<<endl;
+    }
+};
+int main ()
+{
+    Area a(2,4);
+    a.area();
+  return 0;
+}
+
+
+
+
+2.MULTIPLE INHERITANCE-process of creating only one derived class from more than one base class
