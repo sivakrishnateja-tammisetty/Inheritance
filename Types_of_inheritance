@@ -103,3 +103,45 @@ int main ()
     obj.display();
   return 0;
 }
+
+
+
+
+
+
+4.HYBRID INHERITANCE- is a process of combining more than one type of inheritance into one form.
+
+#include<iostream>
+using namespace std;
+class A
+{
+    public:
+     int a;
+     void set_a(int a){this->a=a;}
+};
+class B:public A
+{
+ public:
+    int b;
+    void set_b(int b){this->b=b;}
+};
+class C
+{
+    public:
+    int c;
+    void set_c(int c){this->c=c;}
+};
+class D:public B,public C
+{
+    public:
+    void multiplication(){cout<<"Multiplication is:"<<a*b*c<<endl;}
+};
+int main ()
+{
+    D d;
+    d.set_a(1);
+    d.set_b(2);
+    d.set_c(3);
+    d.multiplication();
+  return 0;
+}
