@@ -39,3 +39,33 @@ int main ()
 
 
 2.MULTIPLE INHERITANCE-process of creating only one derived class from more than one base class
+
+
+#include<iostream>
+using namespace std;
+class Length
+{
+    public:
+    int l=3;
+};
+class Breadth
+{
+    public:
+    int b=8;
+};
+class Rect:public Length,public Breadth
+{
+    int area;
+    public:
+    void area_of_rect()
+    {
+        area=(l*b);
+        cout<<"Area is:"<<area<<endl;
+    }
+};
+int main ()
+{
+    Rect obj;
+    obj.area_of_rect();
+  return 0;
+}
