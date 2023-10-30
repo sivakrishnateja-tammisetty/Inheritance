@@ -145,3 +145,66 @@ int main ()
     d.multiplication();
   return 0;
 }
+
+
+
+
+
+
+
+5.HIERARCHICAL INHERITANCE-is a process of creating or derving more than 1 derived class from only 1 base class.
+
+
+#include<iostream>
+using namespace std;
+class Values
+{
+    public:
+     int a;
+     int b;
+     void set_a(int a){this->a=a;}
+     void set_b(int b){this->b=b;}
+};
+class Add:public Values
+{
+ public:
+ void Addition()
+ {
+     cout<<"Addition :"<<a+b<<endl;
+ }
+};
+class Mul:public Values
+{
+    public:
+    void multiplication()
+    {
+        cout<<"Mul :"<<a*b<<endl;
+    }
+    
+};
+class Sub:public Values
+{
+    public:
+    void subtraction()
+    {
+        cout<<"Sub is:"<<a-b<<endl;
+    }
+};
+int main ()
+{
+    Values v;
+    Add a;
+    a.set_a(3);
+    a.set_b(3);
+    a.Addition();
+    Sub s;
+    s.set_a(4);
+    s.set_b(5);
+    s.subtraction();
+    Mul m;
+    m.set_a(3);
+    m.set_b(2);
+    m.multiplication();
+    
+  return 0;
+}
