@@ -1,10 +1,191 @@
 INHERITANCE:
+  .The capability of a class to derive properities and characteristics from another class.
   .It is the process of deriving or creating a new class from already existing class.
   .By default visibility mode is private.
   .visibility mode specifies whether the features of base class inheriting publicly or privately.
 
+--------------------------------------------------------------------------------------------------------------------
+
+#include <iostream>
+using namespace std;
+class parent
+{
+    public:
+    int p;
+    parent()
+    {
+        cout<<"Default parent constructor"<<endl;
+    }
+    parent(int a)
+    {
+        p=a;
+        cout<<"Parameterized parent constructor"<<endl;
+    }
+};
+class child:public parent
+{
+    public:
+    int c;
+    child()
+    {
+        cout<<"Default child constructor"<<endl;
+    }
+    child(int m)
+    {
+        c=m;
+        cout<<"Parameterized child constructor"<<endl;
+    }
+};
+
+int main()
+{
+  child obj;           
+
+    return 0;
+}
+output:
+Default parent constructor 
+Default child constructor
+-------------------------------------------------------------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+class parent
+{
+    public:
+    int p;
+    parent()
+    {
+        cout<<"Default parent constructor"<<endl;
+    }
+    parent(int a)
+    {
+        p=a;
+        cout<<"Parameterized parent constructor"<<endl;
+    }
+};
+class child:public parent
+{
+    public:
+    int c;
+    child()
+    {
+        cout<<"Default child constructor"<<endl;
+    }
+    child(int m)
+    {
+        c=m;
+        cout<<"Parameterized child constructor"<<endl;
+    }
+};
+
+int main()
+{
+  child obj(2);           
+
+    return 0;
+}
+/*
+output:
+Default parent constructor 
+Parameterized child constructor
+*/
+
+--------------------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+class parent
+{
+    public:
+    int p;
+    parent()
+    {
+        cout<<"Default parent constructor"<<endl;
+    }
+    parent(int a)
+    {
+        p=a;
+        cout<<"Parameterized parent constructor"<<endl;
+    }
+};
+class child:public parent
+{
+    public:
+    int c;
+    child()
+    {
+        cout<<"Default child constructor"<<endl;
+    }
+    child(int m,int n):parent(n)
+    {
+        c=m;
+        cout<<"Parameterized child constructor"<<endl;
+    }
+};
+
+int main()
+{
+  child obj(2,4);           
+
+    return 0;
+}
+/*
+output:
+Parameterized parent constructor 
+Parameterized child constructor
+*/
+-------------------------------------------------------------------------------------------------------
+IS-A-RELATIONSHIP: inheritance is a relation ship
+
+#include <iostream>
+using namespace std;
+class parent
+{
+    public:
+   int a;
+};
+class child:public parent           //is-a-relationship
+{
+    public:
+    int b;
+    
+};
+
+int main()
+{
+    return 0;
+}
+----------------------------------------------------------------------------------------------------------------------
+HAS-A-RELATIONSHIP:
+
+#include <iostream>
+using namespace std;
+class parent
+{
+    public:
+   int a;
+};
+class child           //has-a-relationship
+{
+    public:
+    int b;
+    parent obj;           //create object
+    
+};
+
+int main()
+{
+    return 0;
+}
 
 
+Note:in this example,class child is not inheriting class A,but class child has object of parent class,then this is called Containership.
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
 1.Single Inheritance- process of deriving only one derived class from only one  base class.
 
 
