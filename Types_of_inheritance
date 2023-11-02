@@ -389,3 +389,45 @@ int main ()
     
   return 0;
 }
+-------------------------------------------------------------------------------------------------------------------------------------------------
+//write two classes implementing,inheritance on two show use of parameterized constructors of base class,while making derived class object
+
+
+#include <iostream>
+using namespace std;
+class Student
+{
+    public:
+    int age;
+    string name;
+    char grade;
+    Student(int age,string name,char grade)
+    {
+        this->age=age;
+        this->name=name;
+        this->grade=grade;
+    }
+};
+class HighSchoolStudent:public Student
+{
+    public:
+    string schoolname;
+    HighSchoolStudent(int age,string name,char grade,string schoolname):Student(age,name,grade)
+    {
+        this->schoolname=schoolname;
+    }
+    void display()
+    {
+        cout<<"School Name: "<<schoolname<<endl;
+        cout<<"Name :"<<name<<endl;
+        cout<<"Age :"<<age<<endl;
+        cout<<"Grade :"<<grade<<endl;
+    }
+    
+};
+int main()
+{
+    HighSchoolStudent obj(24,"sivakrishnateja",'A',"St.Johns E.M High School,KPD");
+    obj.display();
+    return 0;
+}
